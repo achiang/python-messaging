@@ -2,12 +2,13 @@ Source: python-messaging
 Maintainer: Alex Chiang <achiang@canonical.com>
 Section: python
 Priority: optional
-Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7.0.50~)
-Standards-Version: 3.9.1
+Build-Depends: python-setuptools, python3-setuptools, python-nose, python-all (>= 2.6.6-3), python3-all, debhelper (>= 7.0.50~)
+Standards-Version: 3.9.2
+Homepage: https://github.com/pmarti/python-messaging
 
 Package: python-messaging
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: ${python:Depends}, ${misc:Depends}
 Breaks: ${python:Breaks}
 Description: SMS/MMS encoder/decoder
  SMS Features
@@ -16,12 +17,32 @@ Description: SMS/MMS encoder/decoder
     * Status report encoding/decoding
     * Relative validity
     * Alphanumeric address decoding
-    * Supports python 2.5 up to 3.2
+    * Supports Python 2.x
     * Tests
  .
  MMS Features
     * SMIL support
     * Main formats supported: jpg, gif, arm, 3gp, midi, etc.
     * Supports MMS 1.0-1.4 decoding/encoding
-    * Supports python 2.5 up to 3.2
+    * Tests
+
+Package: python3-messaging
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Breaks: ${python3:Breaks}
+Description: Python3 SMS/MMS encoder/decoder
+ SMS Features
+    * Supports 7bit, 8bit and UCS2 encodings
+    * Multipart encoding/decoding
+    * Status report encoding/decoding
+    * Relative validity
+    * Alphanumeric address decoding
+    * Supports Python3
+    * Tests
+ .
+ MMS Features
+    * SMIL support
+    * Main formats supported: jpg, gif, arm, 3gp, midi, etc.
+    * Supports MMS 1.0-1.4 decoding/encoding
+    * Supports Python3
     * Tests
