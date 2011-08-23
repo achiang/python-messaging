@@ -18,18 +18,16 @@ Description: SMS/MMS encoder/decoder
     * Relative validity
     * Alphanumeric address decoding
     * Supports Python 2.x
-    * Tests
  .
  MMS Features
     * SMIL support
     * Main formats supported: jpg, gif, arm, 3gp, midi, etc.
     * Supports MMS 1.0-1.4 decoding/encoding
-    * Tests
+    * Supports Python 2.x
 
 Package: python3-messaging
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
-Breaks: ${python3:Breaks}
 Description: Python3 SMS/MMS encoder/decoder
  SMS Features
     * Supports 7bit, 8bit and UCS2 encodings
@@ -38,11 +36,9 @@ Description: Python3 SMS/MMS encoder/decoder
     * Relative validity
     * Alphanumeric address decoding
     * Supports Python3
-    * Tests
  .
  MMS Features
     * SMIL support
     * Main formats supported: jpg, gif, arm, 3gp, midi, etc.
     * Supports MMS 1.0-1.4 decoding/encoding
     * Supports Python3
-    * Tests
