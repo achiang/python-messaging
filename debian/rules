@@ -5,7 +5,7 @@
 
 override_dh_auto_clean:
 	dh_auto_clean
-	rm -rf build python-messaging.egg-info
+	rm -rf build *.egg-info _trial_temp
 
 override_dh_auto_build:
 	dh_auto_build
@@ -18,3 +18,10 @@ override_dh_auto_install:
 	set -ex; for python in $(shell py3versions -r); do \
 		$$python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb; \
 	done
+
+override_dh_auto_test:
+ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
+	set -ex; for python in $(shell pyversions -r) ; do \
+		$$python /usr/bin/nosetests; \
+	done
+endif

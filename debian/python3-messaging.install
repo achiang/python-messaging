@@ -1,1 +1,4 @@
-usr/lib/python3*
+usr/lib/python3/dist-packages/*.egg-info
+usr/lib/python3/dist-packages/messaging/*.py
+usr/lib/python3/dist-packages/messaging/mms/*
+usr/lib/python3/dist-packages/messaging/sms/*
