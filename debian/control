@@ -1,13 +1,27 @@
 Source: python-messaging
-Section: net
-Priority: extra
-Maintainer: Pablo Martí Gamboa <pmarti@warp.es>
-Build-Depends: cdbs (>= 0.4.49), debhelper (>= 5.0.38), python-central (>= 0.5.6)
-Standards-Version: 3.8.3
-XS-Python-Version: >= 2.5
+Maintainer: Alex Chiang <achiang@canonical.com>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
 
 Package: python-messaging
 Architecture: all
-Depends: python (>= 2.5), ${python:Depends}, ${misc:Depends}, ${shlibs:Depends}
-XB-Python-Version: >= 2.5
-Description: A SMS encoding/decoding library
+Depends: ${misc:Depends}, ${python:Depends}
+Breaks: ${python:Breaks}
+Description: SMS/MMS encoder/decoder
+ SMS Features
+    * Supports 7bit, 8bit and UCS2 encodings
+    * Multipart encoding/decoding
+    * Status report encoding/decoding
+    * Relative validity
+    * Alphanumeric address decoding
+    * Supports python 2.5 up to 3.2
+    * Tests
+ .
+ MMS Features
+    * SMIL support
+    * Main formats supported: jpg, gif, arm, 3gp, midi, etc.
+    * Supports MMS 1.0-1.4 decoding/encoding
+    * Supports python 2.5 up to 3.2
+    * Tests

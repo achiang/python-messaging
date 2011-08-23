@@ -1,14 +1,24 @@
-This package was debianized by Pablo Martí Gamboa <pmarti@warp.es> on
-Thu, 22 Jan 2009 13:45:38 +0100.
+This package was debianized by Alex Chiang <achiang@canonical.com> on
+Thu, 18 Aug 2011 23:00:14 UTC.
+
+It was downloaded from https://github.com/pmarti/python-messaging
 
 Upstream Author(s):
 
-    <Pablo Marti pmarti@warp.es>
-    <Roberto Majadas roberto.majadas@gmail.com>
+    Pablo Marti <pmarti@warp.es>
+    Roberto Majadas <roberto.majadas@gmail.com>
+
+Copyright:
+
+    Copyright (C) 2004 Paul Hardwick <paul@peck.org.uk>
+    Copyright (C) 2008 Warp Networks S.L.
+    Copyright (C) 2008 Telefonica I+D
+    Copyright (C) 2008 Francois Aucamp <faucamp@csir.co.za>
+    Copyright (C) 2008-2010 python-messaging developers
 
 License:
 
     GPLv2
 
-The Debian packaging is (C) 2009, Pablo Martí Gamboa <pmarti@warp.es> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+The Debian packaging is (C) 2011, Alex Chiang <achiang@canonical.com> and
+is licensed under the GPLv2, see `/usr/share/common-licenses/GPL-2'.
