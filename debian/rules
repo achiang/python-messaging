@@ -13,6 +13,9 @@ override_dh_auto_build:
 		$$python setup.py build; \
 	done
 
+override_dh_install:
+	dh_install -Xmessaging/test
+
 override_dh_auto_install:
 	dh_auto_install
 	set -ex; for python in $(shell py3versions -r); do \
