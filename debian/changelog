@@ -1,4 +1,4 @@
-python-messaging (0.5.10+debian-1) unstable; urgency=low
+python-messaging (0.5.11+debian-1) unstable; urgency=low
 
   * Initial packaging (Closes: #638536)
   * debian/patches/rm-distribute_setup.patch: unneeded, as we b-d on
