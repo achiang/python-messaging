@@ -1,26 +1,15 @@
 #!/usr/bin/make -f
 
 %:
-	dh --with python2,python3 --buildsystem=python_distutils $@
+	dh --with python2 --buildsystem=python_distutils $@
 
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf build *.egg-info _trial_temp
 
-override_dh_auto_build:
-	dh_auto_build
-	set -ex; for python in $(shell py3versions -r); do \
-		$$python setup.py build; \
-	done
-
 override_dh_install:
-	dh_install -Xmessaging/test
-
-override_dh_auto_install:
-	dh_auto_install
-	set -ex; for python in $(shell py3versions -r); do \
-		$$python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb; \
-	done
+	rm -rf $(CURDIR)/debian/python-messaging/usr/lib/*/dist-packages/messaging/test
+	dh_install
 
 override_dh_auto_test:
 ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
